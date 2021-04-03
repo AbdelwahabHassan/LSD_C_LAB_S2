@@ -7,5 +7,20 @@
 */
 int     get_third_largest(int *tab, int size)
 {
-        // write your algo here
+    int p=0,q=0,r=0;
+    for(int i=0;i<size;i++){
+        if (t[i]>p){
+            r=q;
+            q=p;
+            p=t[i];
+        }
+        if (t[i]>q && t[i]<p){
+            r=q;
+            q=t[i];
+        }
+        if (t[i]>r && t[i]<q){
+            r=t[i];
+        }
+    }
+    return r;
 }
