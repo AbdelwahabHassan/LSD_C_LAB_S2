@@ -2,5 +2,11 @@
 
 int iterative_fibo(int n)
 {
-    // write your iterative_fibo code here
-}
+    int hs0 = 0, hs1 = 0, hsn = 0;
+    for (int i = 0; i < n - 1; i++)
+    {
+        hsn = hs0 + hs1;
+        hs0 = hs1;
+        hs1 = hsn;
+    }
+    return hsn;
